@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'test-app',
+    modulePrefix: 'webpack-css-modules-v2-addon-test-app',
     environment,
     rootURL: '/',
     locationType: 'history',

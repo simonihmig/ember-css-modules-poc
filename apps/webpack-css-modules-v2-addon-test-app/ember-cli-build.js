@@ -3,12 +3,20 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
-  let app = new EmberApp(defaults, {
+  const app = new EmberApp(defaults, {
     autoImport: {
-      watchDependencies: ['webpack-css-modules-v2-addon'],
+      cssLoaderOptions: {
+        modules: 'local',
+      },
     },
   });
 
   const { maybeEmbroider } = require('@embroider/test-setup');
-  return maybeEmbroider(app);
+  return maybeEmbroider(app, {
+    packagerOptions: {
+      cssLoaderOptions: {
+        modules: 'local',
+      },
+    },
+  });
 };

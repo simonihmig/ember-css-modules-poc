@@ -1,0 +1,15 @@
+@value red-color, green-color from '../assets/colors.css';
+
+.hello {
+  background-color: red-color;
+  color: white;
+}
+
+.world {
+  composes: hello;
+  background: green-color;
+}
+
+:global(.jumbo) {
+  font-size: 60px;
+}

@@ -3,7 +3,10 @@ lockfileVersion: 5.4
 importers:
 
   .:
-    specifiers: {}
+    specifiers:
+      prettier: ^2.8.4
+    devDependencies:
+      prettier: 2.8.4
 
   addons/webpack-css-modules-v2-addon:
     specifiers:
@@ -220,7 +223,10 @@ importers:
     specifiers:
       '@ember/optional-features': ^2.0.0
       '@ember/test-helpers': ^2.8.1
-      '@embroider/test-setup': ^1.7.1
+      '@embroider/compat': ^2.1.1
+      '@embroider/core': ^2.1.1
+      '@embroider/test-setup': ^1.8.3
+      '@embroider/webpack': ^2.1.1
       '@glimmer/component': ^1.1.2
       '@glimmer/tracking': ^1.1.2
       babel-eslint: ^10.1.0
@@ -261,7 +267,10 @@ importers:
     devDependencies:
       '@ember/optional-features': 2.0.0
       '@ember/test-helpers': 2.9.3_ember-source@4.9.3
+      '@embroider/compat': 2.1.1_@embroider+core@2.1.1
+      '@embroider/core': 2.1.1
       '@embroider/test-setup': 1.8.3
+      '@embroider/webpack': 2.1.1_aodubbcrkmmgccldp7wkmotu6q
       '@glimmer/component': 1.1.2
       '@glimmer/tracking': 1.1.2
       babel-eslint: 10.1.0_eslint@7.32.0
@@ -3664,7 +3673,7 @@ packages:
       '@babel/core':
         optional: true
     dependencies:
-      '@babel/core': 7.21.0
+      '@babel/core': 7.21.0_supports-color@8.1.1
       find-cache-dir: 3.3.2
       loader-utils: 2.0.4
       make-dir: 3.1.0
