@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   test_apps:
-    name: Test ${{ matrix.app }}
+    name: Test ${{ matrix.app }} | ${{ matrix.build }} | ${{ matrix.mode }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
@@ -22,6 +22,15 @@ jobs:
         app:
           - ember-css-modules-app
           - webpack-css-modules-app
+        build:
+          - classic
+          - embroider
+        mode:
+          - safe
+          - optimized
+        exclude:
+          - build: classic
+            mode: optimized
 
     steps:
       - uses: actions/checkout@v3
@@ -29,3 +38,6 @@ jobs:
       - name: Run Tests
         run: pnpm test:ember
         working-directory: apps/${{ matrix.app }}
+        env:
+          EMBROIDER_TEST_SETUP_FORCE: ${{ matrix.build }}
+          EMBROIDER_TEST_SETUP_OPTIONS: ${{ matrix.mode }}

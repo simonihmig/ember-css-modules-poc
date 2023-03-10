@@ -26,8 +26,8 @@ module.exports = function (defaults) {
 
   // return app.toTree();
 
-  const { Webpack } = require('@embroider/webpack');
-  return require('@embroider/compat').compatBuild(app, Webpack, {
+  const { maybeEmbroider } = require('@embroider/test-setup');
+  return maybeEmbroider(app, {
     packagerOptions: {
       cssLoaderOptions: {
         modules: 'local',
