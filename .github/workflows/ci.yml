@@ -22,6 +22,7 @@ jobs:
         app:
           - ember-css-modules-app
           - webpack-css-modules-app
+          - webpack-css-modules-v2-addon-test-app
         build:
           - classic
           - embroider
