@@ -36,6 +36,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/pnpm
+      - name: Build v2 addons
+        run: pnpm build:addons
       - name: Run Tests
         run: pnpm test:ember
         working-directory: apps/${{ matrix.app }}
