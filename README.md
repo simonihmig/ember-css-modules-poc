@@ -33,4 +33,4 @@ We are running the above matrix in CI, compare this to the [latest CI runs](http
 
 [^1]: ember-css-modules does not support optimized mode
 [^2]: we cannot import colocated CSS from our own app. Would get fixed by https://github.com/ef4/ember-auto-import/issues/565
-[^3]: basic CSS import and scoped classes work, but importing [CSS from CSS](./addons/webpack-css-modules-v2-addon/src/components/hello-world.module.css) breaks module loader. Reason t.b.d.
+[^3]: basic CSS import and scoped classes work, but importing [CSS from CSS](addons/webpack-css-modules-v2-addon/src/components/hello-world.module.css) breaks module loader. Reason t.b.d.
