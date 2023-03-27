@@ -27,10 +27,10 @@ Addon: [webpack-css-modules-v2-addon](./addons/webpack-css-modules-v2-addon/)
 | ---------------------------- | ------- | -------------- | ------------------- |
 | ember-css-modules-app        | ✅      | ✅             | ❌ [^1]             |
 | webpack-css-modules-app      | ❌ [^2] | ✅             | ✅                  |
-| webpack-css-modules-v2-addon | ❌ [^3] | ✅             | ✅                  |
+| webpack-css-modules-v2-addon | ✅ [^3] | ✅             | ✅                  |
 
 We are running the above matrix in CI, compare this to the [latest CI runs](https://github.com/simonihmig/ember-css-modules-poc/actions?query=branch%3Amaster).
 
 [^1]: ember-css-modules does not support optimized mode
 [^2]: we cannot import colocated CSS from our own app. Would get fixed by https://github.com/ef4/ember-auto-import/issues/565
-[^3]: basic CSS import and scoped classes work, but importing [CSS from CSS](addons/webpack-css-modules-v2-addon/src/components/hello-world.module.css) breaks module loader. Reason t.b.d.
+[^3]: basic CSS import and scoped classes work, but importing [CSS from CSS](addons/webpack-css-modules-v2-addon/src/components/hello-world.module.css) requires [these changes](https://github.com/embroider-build/embroider/pull/1379) to be released.
